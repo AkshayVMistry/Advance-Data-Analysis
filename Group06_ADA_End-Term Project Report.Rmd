@@ -1,0 +1,364 @@
+---
+title: "ADA_End-Term Project_Group6"
+author: "Yukti Dewan, Anchal Gupta, Chandni Kaundilya, Rishu Verma, Akshaykumar Mistry"
+date: "2023-01-01"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Project Chosen
+
+<center> The topic we have chosen for our project is **IPL Super 11**. In this project we would be creating our group's dream cricket team by analyzing the data given.
+
+![](C:/Users/user/OneDrive/Desktop/ADA/image1.png)
+
+<br>
+Before starting with our auction process, we would first like to mention the rules and assumptions defined by us for creating the dream team. </center>
+
+
+## Assumptions Taken
+
+- The number of matches played for a player in IPL as given in the data set are less compared to what they have actually played in IPL when checked on internet, So we choose our Super 11 based on the dataset given.
+
+- We have excluded the retired IPL players based on current news.
+
+
+## Rules for Team Formation
+
+- A team is supposed to have 12 players available - 11 on the field, of which at least seven must be Indian, and one substitute - for selection on a matchday.
+
+- Only 4 players in a team can be foreigners. 
+
+
+## Auction Process
+
+- In this Auction process, we are selecting an super team for IPL based on a datasets from 2008-2020 containing all ball-by-ball and match-by-match order. 
+
+- We have selected players who have played or bowled more than 300 balls only.
+
+- Our team combination will be consisting of strong openers, middle-order hitters, all-rounders, a wicketkeeper, and quick and spin bowlers.
+
+- For this, each player’s past IPL performance will be analysed including number of balls played/bowled, runs scored/given, strike rate/economy, 4’s and 6’s , stumps/catches, etc and finally we will be selecting our Super 11.
+
+
+## Team Combination
+
+### Batsmen
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/bat.jpg)
+</center>
+
+<br>
+
+- **5 Batsmen**
+  + 2 Opener Batsmen
+  + 3 Middle Order Batsmen
+
+
+### Bowlers
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/ball.jpg)
+</center>
+
+<br>
+
+- **4 Bowlers**
+  + 1 Spinner
+  + 2 Fast Bowler
+  + 1 Medium Pacer
+
+
+### All-Rounder
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/all.jpg) 
+</center>
+
+<br>
+
+- **2 All-Rounders**
+  + 1 Spinner + Middle-order batsman
+  + 1 Fast Bowler + Middle-Order batsman
+
+
+## Missing Value Analysis
+
+<br>
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/miss.png) 
+</center>
+  
+<br>
+
+- We have not removed the missing values as there be significant loss in data.
+- It is also difficult to Impute.
+
+<br>
+
+## Exploratory Data Analysis
+
+<br>
+
+## **Batsmen - Scatter Plot**
+
+<br>
+<br>
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/exp1.png) 
+</center>
+<br>
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/exp2.png) 
+</center>
+  
+<br>  
+<center>**Average Strike Rate should be 112.35**</center>   
+
+<br>
+
+## **Bowler - Scatter Plot**
+
+<br>
+<br>
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/exp3.png) 
+</center>
+<br>
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/exp4.png) 
+</center>
+  
+<br>  
+<center>**Average economy should be 8.507**</center>  
+
+<br>
+
+## **Top 10 Hitters**
+
+<br>
+<br>
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/exp5.png) 
+</center>
+
+  
+<br>  
+<center>**Most players hit way more fours than sixes**</center>  
+
+<br>
+
+## **Top 10 Run Scorers**
+
+<br>
+<br>
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/exp6.png) 
+</center>
+
+
+<br>  
+<center>**Top 10 scorers with average run, boundary percentage and strike rate**</center>  
+
+<br>
+
+## **Top 10 Batsmen by Strike Rate**
+
+<br>
+<br>
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/exp7.png) 
+</center>
+
+  
+<br>  
+<center>**Top 10 batsmen with boundary percentage and strike rate**</center>  
+
+<br>
+
+## **Top 10 Bowlers by Wickets Taken**
+
+<br>
+<br>
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/exp8.png) 
+</center>
+
+
+<br>  
+<center>**Top 10 bowlers with boundary percentage, economy and wickets**</center>  
+
+<br>
+
+## **Top "Man of the Match" Players**
+
+<br>
+<br>
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/exp9.png) 
+</center>
+
+  
+<br>  
+<center>**AB de Villiers is the player in IPL to have maximum "Man of the Match" award**</center>  
+
+<br>
+
+## Batsmen Selection Criteria
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/bat1.png) 
+</center>
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/bat2.png) 
+</center>
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/bat3.png) 
+</center>
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/bat4.png) 
+</center>
+
+<br>  
+
+- Firstly we took no. of runs scored as the first priority parameter.
+- Next we took strike rate as the second priority parameter.
+- Last priority criteria was player of match.
+- Wicket Keeper selected is based on no. of stumps max out of batsmen.
+
+<br>        
+
+
+## Bowlers Selection Criteria
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/bowl1.png) 
+</center>
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/bowl2.png) 
+</center>
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/bowl3.png) 
+</center>
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/bowl4.png) 
+</center>
+
+<br>  
+
+- Firstly we took no. of wickets taken(max) as our top priority selection criteria.
+- Economy (calculated using formula = runs/no. of balls(6)) was the next priority criteria.
+
+<br>        
+
+
+## All-Rounders Selection Criteria
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/all1.png) 
+</center>
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/all2.png) 
+</center>
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/all3.png) 
+</center>
+
+<br>  
+
+- The criteria selected was to choose a player which was above average bowler and batsmen both.
+- Top bowlers were searched in the top 50 batsmen list.
+- Matching top players were chosen as the all-rounders.
+
+<br>        
+
+
+## Extra Player Selection Criteria
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/extra1.png) 
+</center>
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/extra2.png) 
+</center>
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/extra3.png) 
+</center>
+
+<br>  
+
+- The criteria taken for selecting All-Rounders was taken to select the extra player.
+
+<br>        
+
+
+## Our Final Team - **Uttrakhand Unicorns**
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/team.png) 
+</center>
+<br>
+
+## Logistic Regression
+
+<br>
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/log.png) 
+</center>
+
+<br>  
+
+- When the team wins the toss, then compared to choosing to ‘Bat’ if the team chooses to ‘Field’ then the probability of winning the match increases by 0.39 i.e. 39.82%.
+
+<br> 
+
+## **Thank You**
+
+<center>
+![](C:/Users/user/OneDrive/Desktop/ADA/win.jpg) 
+</center>
+
+
+
